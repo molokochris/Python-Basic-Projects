@@ -16,5 +16,4 @@ for i in range(rows):
     print("")
 for i in range(rows):
     print(" ", end="")
-print("#", end="")
-print("")
+print("#")
