@@ -4,7 +4,7 @@ encrypted_message = ""
 def to_binary(char):
     return ord(char)
 
-def encrypt(binary_num):
+def encrypt_binary(binary_num):
     if (binary_num == 32):
         return binary_num
     elif (binary_num >= 120 and binary_num <= 122):
@@ -14,12 +14,12 @@ def encrypt(binary_num):
     else:
         return binary_num + 3
 
-def decrypt(binary_num):
+def decrypt_binary(binary_num):
     return chr(binary_num)
 
 
 for char in secret_message:
-    encrypted_message += str(decrypt(encrypt(to_binary(char))))
+    encrypted_message += str(decrypt_binary(encrypt_binary(to_binary(char))))
 
 print("secret message", secret_message)
 print("encrypted message", encrypted_message)
