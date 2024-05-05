@@ -1,5 +1,5 @@
 secret_message = input("Enter your message: ")
-num_shift = int(input("Enter number of characters to shift: "))
+key_num = int(input("Enter number of characters to shift: "))
 encrypted_message = ""
 '''
 def to_binary(char):
@@ -32,13 +32,13 @@ for char in secret_message:
         encrypted_message += str(chr(to_binary))
     elif (to_binary >= 120 and to_binary <= 122):
         # encrypted_message += str(chr(to_binary - 23))
-        encrypted_message += str(chr(to_binary - (26 - num_shift)))
+        encrypted_message += str(chr(to_binary - (26 - key_num)))
     elif (to_binary >= 88 and to_binary <= 90):
         # encrypted_message += str(chr(to_binary - 23))
-        encrypted_message += str(chr(to_binary - (26 - num_shift)))
+        encrypted_message += str(chr(to_binary - (26 - key_num)))
     else:
         # encrypted_message += str(chr(to_binary + 3))
-        encrypted_message += str(chr(to_binary + num_shift))
+        encrypted_message += str(chr(to_binary + key_num))
 
 print("secret message: ", secret_message)
 print("encrypted message: ", encrypted_message)
