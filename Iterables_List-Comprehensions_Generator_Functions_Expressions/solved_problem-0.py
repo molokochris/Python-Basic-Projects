@@ -11,19 +11,19 @@
 class FibNums:
 
     def __init__(self):
-        self.currentVal = 0
-        self.index = 2
+        self.first = 0
+        self.second = 1
     
     def __iter__(self):
         return self
     
     def __next__(self):
-        self.currentVal = (self.index - 1) + (self.index - 2) # Formula not correct
-        self.index += 1
-        if self.currentVal >= 0:
-            return self.currentVal
+        fibNum = self.first + self.second
+        self.first = self.second
+        self.second = fibNum
+        return fibNum
     
 fibNum = FibNums()
 
 for i in range(10):
-    print("Fib:", next(fibNum)) # but next() works
+    print("Fib:", next(fibNum))
