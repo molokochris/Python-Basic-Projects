@@ -1,2 +1,3 @@
 # Python-Basic-Projects
-# Python-Basic-Projects
+
+30-day Python Course
