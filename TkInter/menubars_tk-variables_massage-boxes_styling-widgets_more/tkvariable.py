@@ -13,7 +13,6 @@ def bind_button(event=None):
     else:
         getDataButton.bind("<Button-1>", get_data)
 
-
 root = Tk()
 
 strVar = StringVar()
