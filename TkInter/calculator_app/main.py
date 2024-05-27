@@ -52,17 +52,19 @@ class Calculator:
                                                          column=3)
 
         # Second Row Buttons
-        # self.button4 = ttk.Button(root, text="4",
-        #     command=lambda: self.button_press("4")).grid(row=2,
-        #                                                  column=0)
+        self.button4 = ttk.Button(root, text="4",
+        command=lambda: self.button_press("4")).grid(row=2,
+                                                         column=0)
         
-        # self.button5 = ttk.Button(root, text="5",
-        #     command=lambda: self.button_press("5")).grid(row=2,
-        #                                                  column=1)
+        self.button5 = ttk.Button(root, text="5",
+        command=lambda: self.button_press("5")).grid(row=2,
+                                                         column=1)
         
-        # self.button6 = ttk.Button(root, text="6",
-        #     command=lambda: self.button_press("6")).grid(row=2,
-        #                                                  column=2)
+        self.button6 = ttk.Button(root, text="6",
+        command=lambda: self.button_press("6")).grid(row=2,
+                                                         column=2)
+        self.button_mult = ttk.Button(root, text="*",
+        command=lambda: self.math_button_press("*")).grid(row=2, column=3)
 
 root = Tk()
 app = Calculator(root)
